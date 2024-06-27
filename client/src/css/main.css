@@ -171,7 +171,7 @@
 .chocolate-sec-background .chocolate-sec .left-box-chocolate {
   width: 65%;
   height: 470px;
-  background-color: #32CAD7;
+  background-color: #32cad7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,10 +198,10 @@
   color: white;
   cursor: pointer;
   transition: 800ms;
+  letter-spacing: 2px;
 }
 .chocolate-sec-background .chocolate-sec .left-box-chocolate button:hover {
   color: #ff4461;
-  letter-spacing: 2px;
 }
 .chocolate-sec-background .chocolate-sec .right-box-chocolate {
   width: 35%;
@@ -213,6 +213,603 @@
   height: 100%;
 }
 
+.colorfull-sec-background .colorfull-sec {
+  width: 100%;
+  display: flex;
+}
+.colorfull-sec-background .colorfull-sec .left-box-colorfull {
+  width: 33%;
+  height: 450px;
+}
+.colorfull-sec-background .colorfull-sec .left-box-colorfull img {
+  width: 100%;
+  height: 100%;
+}
+.colorfull-sec-background .colorfull-sec .right-box-colorfull {
+  width: 67%;
+  height: 450px;
+  background-color: #ff6393;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5rem;
+  color: white;
+}
+.colorfull-sec-background .colorfull-sec .right-box-colorfull div {
+  width: 70%;
+}
+.colorfull-sec-background .colorfull-sec .right-box-colorfull div h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  padding: 20px 0;
+}
+.colorfull-sec-background .colorfull-sec .right-box-colorfull div p {
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.colorfull-sec-background .colorfull-sec .right-box-colorfull div button {
+  padding: 0.6rem 2.5rem;
+  border-radius: 20px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  color: #ff4562;
+  letter-spacing: 2px;
+}
+
+.eaten-sec-background .eaten-sec {
+  width: 100%;
+  display: flex;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten {
+  width: 66.66%;
+  height: 450px;
+  background-color: #f3e85d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ff4562;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten div {
+  width: 50%;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten div p {
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten div h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  padding: 20px 0;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten div button {
+  padding: 0.6rem 2.5rem;
+  border-radius: 20px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 800ms;
+  background-color: #ff4562;
+  color: white;
+  letter-spacing: 2px;
+}
+.eaten-sec-background .eaten-sec .left-box-eaten div button:hover {
+  color: #ff4562;
+  background-color: white;
+}
+.eaten-sec-background .eaten-sec .right-box-eaten {
+  width: 33.33%;
+  height: 450px;
+}
+.eaten-sec-background .eaten-sec .right-box-eaten img {
+  width: 100%;
+  height: 100%;
+}
+
+.location-sec-background .location-sec {
+  width: 100%;
+  display: flex;
+}
+.location-sec-background .location-sec .left-box-location {
+  width: 33.33%;
+  height: 450px;
+  background-color: #32cad7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("https://faryita.wpengine.com/wp-content/uploads/2024/04/Home-2-Footer-Hotspot-Image.png");
+  background-position: center;
+  background-size: cover;
+  color: #ff4562;
+}
+.location-sec-background .location-sec .left-box-location h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  padding: 20px 0;
+}
+.location-sec-background .location-sec .left-box-location button {
+  padding: 0.6rem 2.5rem;
+  border-radius: 20px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff4562;
+  color: white;
+  letter-spacing: 1px;
+}
+.location-sec-background .location-sec .middle-box-location {
+  width: 33.33%;
+  height: 450px;
+  background-color: aqua;
+}
+.location-sec-background .location-sec .middle-box-location img {
+  width: 100%;
+  height: 100%;
+}
+.location-sec-background .location-sec .right-box-location {
+  width: 33.33%;
+  height: 450px;
+  background-color: #ff4562;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.location-sec-background .location-sec .right-box-location div {
+  width: 90%;
+}
+.location-sec-background .location-sec .right-box-location div h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  padding: 20px 0;
+}
+.location-sec-background .location-sec .right-box-location div button {
+  padding: 0.6rem 2.3rem;
+  border-radius: 20px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 800ms;
+  color: #ff4562;
+  background-color: white;
+  letter-spacing: 1px;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.email-sec-background .email-sec {
+  width: 100%;
+  display: flex;
+}
+.email-sec-background .email-sec .left-box-email {
+  width: 33.33%;
+  height: 450px;
+}
+.email-sec-background .email-sec .left-box-email img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.email-sec-background .email-sec .right-box-email {
+  width: 66.66%;
+  height: 450px;
+  background-color: red;
+  background-image: url("https://ohlala.bold-themes.com/main-demo/wp-content/uploads/sites/3/2017/09/dots.gif");
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email-sec-background .email-sec .right-box-email div {
+  display: flex;
+  gap: 50px;
+}
+.email-sec-background .email-sec .right-box-email div button {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff4461;
+  color: rgba(255, 255, 255, 0.612);
+  letter-spacing: 2px;
+}
+.email-sec-background .email-sec .right-box-email div input {
+  padding: 0.8rem 3rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff4461;
+}
+.email-sec-background .email-sec .right-box-email div ::placeholder {
+  color: white;
+  opacity: 0.6;
+  letter-spacing: 2px; /* Firefox */
+}
+.email-sec-background .email-sec .right-box-email div ::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: white;
+}
+
+.shop-sec-background .shop-sec {
+  width: 100%;
+  display: flex;
+}
+.shop-sec-background .shop-sec .left-box-shop {
+  width: 65%;
+  height: 450px;
+  background-color: #f3e85d;
+  color: #ff4562;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.shop-sec-background .shop-sec .left-box-shop h1 {
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  padding: 20px 0;
+}
+.shop-sec-background .shop-sec .left-box-shop button {
+  padding: 0.6rem 2.3rem;
+  border-radius: 20px 0 20px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 800ms;
+  color: #ff4562;
+  background-color: white;
+  letter-spacing: 1px;
+  margin: 30px 0;
+  font-weight: 600;
+}
+.shop-sec-background .shop-sec .right-box-shop {
+  width: 35%;
+  height: 450px;
+}
+.shop-sec-background .shop-sec .right-box-shop img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .grayfurt-sec-background .grayfurt-sec {
+    flex-wrap: wrap;
+  }
+  .grayfurt-sec-background .grayfurt-sec .left-box-grayfurt {
+    width: 100%;
+  }
+  .grayfurt-sec-background .grayfurt-sec .middle-box-grayfurt {
+    width: 50%;
+  }
+  .grayfurt-sec-background .grayfurt-sec .right-box-grayfurt {
+    width: 50%;
+  }
+  .melon-sec-background .melon-sec {
+    flex-wrap: wrap;
+  }
+  .melon-sec-background .melon-sec .left-box-melon {
+    width: 50%;
+  }
+  .melon-sec-background .melon-sec .middle-box-melon {
+    width: 50%;
+  }
+  .melon-sec-background .melon-sec .right-box-melon {
+    width: 100%;
+  }
+  .chocolate-sec-background .chocolate-sec {
+    flex-wrap: wrap;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate {
+    width: 100%;
+    height: 350px;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate h1 {
+    font-size: 3rem;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate button {
+    padding: 0.5rem 2.3rem;
+  }
+  .chocolate-sec-background .chocolate-sec .right-box-chocolate {
+    display: none;
+  }
+  .colorfull-sec-background .colorfull-sec {
+    flex-wrap: wrap;
+  }
+  .colorfull-sec-background .colorfull-sec .left-box-colorfull {
+    width: 100%;
+    height: 400px;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull {
+    width: 100%;
+    height: 370px;
+    padding: 0 5rem;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div h1 {
+    font-size: 3rem;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div p {
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div button {
+    padding: 0.5rem 2rem;
+  }
+  .eaten-sec-background .eaten-sec {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten {
+    width: 100%;
+    height: 370px;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div p {
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div h1 {
+    font-size: 3rem;
+    padding: 20px 0;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div button {
+    padding: 0.5rem 2rem;
+  }
+  .eaten-sec-background .eaten-sec .right-box-eaten {
+    width: 100%;
+  }
+  .location-sec-background .location-sec {
+    flex-wrap: wrap;
+  }
+  .location-sec-background .location-sec .left-box-location {
+    width: 100%;
+    height: 400px;
+  }
+  .location-sec-background .location-sec .left-box-location h1 {
+    font-size: 3rem;
+  }
+  .location-sec-background .location-sec .left-box-location button {
+    padding: 0.5rem 2rem;
+  }
+  .location-sec-background .location-sec .middle-box-location {
+    display: none;
+  }
+  .location-sec-background .location-sec .right-box-location {
+    width: 100%;
+    height: 350px;
+  }
+  .location-sec-background .location-sec .right-box-location div {
+    width: 100%;
+  }
+  .location-sec-background .location-sec .right-box-location div h1 {
+    font-size: 3rem;
+    padding: 10px 0;
+  }
+  .location-sec-background .location-sec .right-box-location div button {
+    padding: 0.5rem 2rem;
+    margin: 20px 0;
+  }
+  .email-sec-background .email-sec {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .email-sec-background .email-sec .left-box-email {
+    width: 100%;
+  }
+  .email-sec-background .email-sec .right-box-email {
+    width: 100%;
+  }
+  .email-sec-background .email-sec .right-box-email div button {
+    padding: 0.8rem 3rem;
+  }
+  .email-sec-background .email-sec .right-box-email div input {
+    padding: 0.8rem 5rem;
+  }
+  .shop-sec-background .shop-sec {
+    flex-wrap: wrap;
+  }
+  .shop-sec-background .shop-sec .left-box-shop {
+    width: 100%;
+    height: 350px;
+  }
+  .shop-sec-background .shop-sec .left-box-shop h1 {
+    font-size: 3rem;
+    padding: 10px 0;
+  }
+  .shop-sec-background .shop-sec .left-box-shop button {
+    padding: 0.5rem 2.2rem;
+    margin: 10px 0;
+  }
+  .shop-sec-background .shop-sec .right-box-shop {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .grayfurt-sec-background .grayfurt-sec {
+    flex-wrap: wrap;
+  }
+  .grayfurt-sec-background .grayfurt-sec .left-box-grayfurt {
+    width: 100%;
+  }
+  .grayfurt-sec-background .grayfurt-sec .middle-box-grayfurt {
+    width: 100%;
+    height: 250px;
+  }
+  .grayfurt-sec-background .grayfurt-sec .right-box-grayfurt {
+    width: 100%;
+    height: 300px;
+  }
+  .melon-sec-background .melon-sec .left-box-melon {
+    width: 100%;
+    height: 300px;
+  }
+  .melon-sec-background .melon-sec .middle-box-melon {
+    width: 100%;
+    height: 300px;
+  }
+  .melon-sec-background .melon-sec .right-box-melon {
+    width: 100%;
+    height: 250px;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate {
+    height: 250px;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate span {
+    font-size: 12px;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate h1 {
+    font-size: 1.8rem;
+  }
+  .chocolate-sec-background .chocolate-sec .left-box-chocolate button {
+    padding: 0.3rem 2rem;
+    font-size: 12px;
+  }
+  .chocolate-sec-background .chocolate-sec .right-box-chocolate {
+    display: none;
+  }
+  .colorfull-sec-background .colorfull-sec .left-box-colorfull {
+    height: 300px;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull {
+    height: 300px;
+    padding: 0 1rem;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div {
+    width: 100%;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div span {
+    font-size: 12px;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div h1 {
+    font-size: 2rem;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div p {
+    font-size: 11px;
+  }
+  .colorfull-sec-background .colorfull-sec .right-box-colorfull div button {
+    padding: 0.3rem 1.8rem;
+    font-size: 12px;
+  }
+  .eaten-sec-background .eaten-sec {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten {
+    width: 100%;
+    height: 300px;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div {
+    width: 90%;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div span {
+    font-size: 12px;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div p {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div h1 {
+    font-size: 2rem;
+    padding: 20px 0;
+  }
+  .eaten-sec-background .eaten-sec .left-box-eaten div button {
+    padding: 0.3rem 1.8rem;
+    font-size: 12px;
+  }
+  .eaten-sec-background .eaten-sec .right-box-eaten {
+    width: 100%;
+    height: 270px;
+  }
+  .location-sec-background .location-sec {
+    flex-wrap: wrap;
+  }
+  .location-sec-background .location-sec .left-box-location {
+    width: 100%;
+    height: 300px;
+  }
+  .location-sec-background .location-sec .left-box-location h1 {
+    font-size: 2rem;
+  }
+  .location-sec-background .location-sec .left-box-location button {
+    padding: 0.3rem 1.8rem;
+    font-size: 12px;
+  }
+  .location-sec-background .location-sec .middle-box-location {
+    display: block;
+    width: 100%;
+    height: 350px;
+  }
+  .location-sec-background .location-sec .right-box-location {
+    width: 100%;
+    height: 300px;
+  }
+  .location-sec-background .location-sec .right-box-location div {
+    width: 100%;
+  }
+  .location-sec-background .location-sec .right-box-location div h1 {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .location-sec-background .location-sec .right-box-location div button {
+    padding: 0.3rem 1.8rem;
+    margin: 20px 0;
+    font-size: 12px;
+  }
+  .location-sec-background .location-sec .right-box-location div p {
+    font-size: 12px;
+  }
+  .location-sec-background .location-sec .right-box-location div h6 {
+    font-size: 12px;
+  }
+  .email-sec-background .email-sec .left-box-email {
+    width: 100%;
+    height: 250px;
+  }
+  .email-sec-background .email-sec .right-box-email {
+    height: 300px;
+  }
+  .email-sec-background .email-sec .right-box-email div {
+    gap: 20px;
+  }
+  .email-sec-background .email-sec .right-box-email div button {
+    padding: 0.5rem 1.2rem;
+    font-size: 12px;
+  }
+  .email-sec-background .email-sec .right-box-email div input {
+    padding: 0.5rem 1.5rem;
+    font-size: 12px;
+  }
+  .shop-sec-background .shop-sec .left-box-shop {
+    width: 100%;
+    height: 200px;
+  }
+  .shop-sec-background .shop-sec .left-box-shop span {
+    font-size: 12px;
+  }
+  .shop-sec-background .shop-sec .left-box-shop h1 {
+    font-size: 2rem;
+  }
+  .shop-sec-background .shop-sec .left-box-shop button {
+    padding: 0.3rem 2rem;
+    margin: 0;
+    font-size: 12px;
+  }
+  .shop-sec-background .shop-sec .right-box-shop {
+    width: 100%;
+    height: 250px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -229,6 +826,184 @@ ul {
   list-style: none !important;
 }
 
+.main-footer-sec {
+  width: 100%;
+  background-color: rgba(30, 60, 87, 0.9);
+  display: flex;
+}
+.main-footer-sec .left-box-footer {
+  width: 70%;
+  padding: 10px 0;
+}
+.main-footer-sec .left-box-footer .left-top-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
+  padding: 0 0 20px 20px;
+  position: relative;
+}
+.main-footer-sec .left-box-footer .left-top-footer div {
+  width: 15%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  animation: moveUpDown 3s infinite;
+}
+.main-footer-sec .left-box-footer .left-top-footer div img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+.main-footer-sec .left-box-footer .left-top-footer p {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+.main-footer-sec .left-box-footer .left-top-footer p span {
+  color: rgba(255, 255, 255, 0.569);
+  font-weight: 700;
+}
+.main-footer-sec .left-box-footer .left-bottom-footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 70px;
+  padding: 20px;
+}
+.main-footer-sec .left-box-footer .left-bottom-footer .icon-box-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-footer-sec .left-box-footer .left-bottom-footer .icon-box-footer i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-footer-sec .left-box-footer .left-bottom-footer .icon-box-footer i:hover {
+  color: rgba(255, 255, 255, 0.569);
+}
+.main-footer-sec .right-box-footer {
+  width: 30%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-footer-sec .right-box-footer h4 {
+  color: rgba(255, 255, 255, 0.569);
+  font-size: 1.2rem;
+}
+.main-footer-sec .right-box-footer ul {
+  display: flex;
+  gap: 20px;
+}
+.main-footer-sec .right-box-footer ul a li {
+  color: rgb(24, 47, 68);
+  font-size: 0.8rem;
+}
+.main-footer-sec .right-box-footer ul a li:hover {
+  color: rgba(255, 255, 255, 0.569);
+}
+
+@media only screen and (max-width: 800px) {
+  .main-footer-sec .left-box-footer {
+    width: 70%;
+  }
+  .main-footer-sec .left-box-footer .left-top-footer {
+    gap: 30px;
+    padding: 0 0 10px 10px;
+  }
+  .main-footer-sec .left-box-footer .left-top-footer div {
+    width: 26%;
+    right: 2%;
+  }
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(-40px);
+    }
+    50% {
+      transform: translateY(-100px);
+    }
+  }
+  .main-footer-sec .left-box-footer .left-top-footer p {
+    font-size: 12px;
+  }
+  .main-footer-sec .left-box-footer .left-bottom-footer {
+    height: 30px;
+    gap: 50px;
+    padding: 10px;
+  }
+  .main-footer-sec .left-box-footer .left-bottom-footer .icon-box-footer i {
+    font-size: 1rem;
+  }
+  .main-footer-sec .right-box-footer {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-footer-sec .right-box-footer h4 {
+    color: rgba(255, 255, 255, 0.569);
+    font-size: 1rem;
+  }
+  .main-footer-sec .right-box-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .main-footer-sec .right-box-footer ul a li {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-footer-sec .left-box-footer {
+    width: 60%;
+  }
+  .main-footer-sec .left-box-footer .left-top-footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  .main-footer-sec .left-box-footer .left-top-footer div {
+    display: none;
+  }
+  .main-footer-sec .left-box-footer .left-top-footer p {
+    font-size: 10px;
+  }
+  .main-footer-sec .left-box-footer .left-bottom-footer {
+    height: 10px;
+    gap: 20px;
+  }
+  .main-footer-sec .left-box-footer .left-bottom-footer .icon-box-footer i {
+    font-size: 0.8rem;
+  }
+  .main-footer-sec .right-box-footer {
+    width: 40%;
+  }
+  .main-footer-sec .right-box-footer h4 {
+    font-size: 0.8rem;
+  }
+  .main-footer-sec .right-box-footer ul {
+    gap: 5px;
+  }
+  .main-footer-sec .right-box-footer ul a li {
+    font-size: 0.55rem;
+  }
+}
 .bg-body {
   background-color: red !important;
 }
