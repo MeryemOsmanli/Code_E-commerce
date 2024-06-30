@@ -1,12 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 function Home() {
   return (
     <>
-      {/* <Helmet>
-        <title>{t("home")} </title>  
+      <Helmet>
+        <title>home </title>  
         <link rel="canonical" href="https://www.tacobell.com/" />
-      </Helmet> */}
+      </Helmet>
       {/*  start first section grayfurt */}
       <div className="grayfurt-sec-background">
         <div className="grayfurt-sec">
