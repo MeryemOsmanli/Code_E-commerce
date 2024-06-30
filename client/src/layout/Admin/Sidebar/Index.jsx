@@ -10,6 +10,7 @@ import { useDataContext } from '../../../context/context';
 
 const Sidebar = () => {
     const { sideBardHeadRef, theme } = useDataContext()
+    const { userToken } = useSelector(state => state.users)
 
     const location = useLocation()
     const dispatch = useDispatch()
@@ -28,14 +29,18 @@ const Sidebar = () => {
                     <div className="profileImageInside">
                         <div className="profileImageInsideLeft">
                             <div className="profileImageInsideLeftImg">
-                                <img src="https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg" alt="exImage" />
-                               
+                                <img src={`${userToken?.isAdmin == true ? userToken?.profileImage : 'https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg'
+                                    }`} alt="exImage" />
+                                <span
+                                    style={{ background: userToken?.isAdmin == false ? 'red' : '' }} className={`${userToken?.isAdmin == true && userToken?.isLogin == true ? 'activeGreen' : ''
+                                        }`}
+                                >
 
-                                {/* </span> */}
+                                </span>
                             </div>
                             <div className="profileImageInsideLeftAbout">
                                 <h5>
-                                   admin
+                                    {userToken?.isAdmin == true ? userToken?.fullName : 'Admin'}
                                 </h5>
                                 <span>Gold Member</span>
                             </div>
@@ -118,6 +123,7 @@ const Sidebar = () => {
                         </span>
                     </Link>
                 </li>
+
                 <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/blogs' ? "navMenuActive" : ""}`} >
                     <Link to={'/admin/blogs'}>
                         <div className="navMenuIcon text-warning">
@@ -173,6 +179,8 @@ const Sidebar = () => {
                         </span>
                     </Link>
                 </li>
+
+ 
 
                 <li className={`sidebarBottomLinks navMenu ${location.pathname === '/admin/addBlog' ? "navMenuActive" : ""}`} >
                     <Link to={'/admin/addBlog'}>

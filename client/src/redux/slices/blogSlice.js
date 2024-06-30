@@ -9,6 +9,7 @@ export const postBlog = createAsyncThunk('postBlog', async (newData) => {
     const response = await axios.post(`http://localhost:3030/blogs`, newData)
     return response.data
 })
+
 export const getOneBlog = createAsyncThunk('getOneBlog', async (id) => {
     const response = await axios.get(`http://localhost:3030/blogs/${id}`)
     return response.data
@@ -17,10 +18,13 @@ export const deleteBlog = createAsyncThunk('deleteBlog', async (id) => {
     const response = await axios.delete(`http://localhost:3030/blogs/${id}`)
     return response.data
 })
+
 export const updateBlog = createAsyncThunk('updateBlog', async ({ id, newData }) => {
     const response = await axios.put(`http://localhost:3030/blogs/${id}`, newData)
     return response.data
 })
+
+
 const blogsSlice = createSlice({
     name: "blogs",
     initialState: {

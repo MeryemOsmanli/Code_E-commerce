@@ -5,6 +5,7 @@ import { mdiCog, mdiFormatLineSpacing, mdiLogout, mdiMenu, mdiMenuDown, mdiMoonF
 import { useDispatch, useSelector } from 'react-redux'
 import toast from 'react-hot-toast';
 import { useDataContext } from '../../../context/context';
+// import { searchOurTeam } from '../../../redux/slices/ourTeamSlice';
 import { searchQuestions } from '../../../redux/slices/faqSlice';
 // import { searchSubscribers } from '../../../redux/slices/subscribersSlice';
 import { logOut, searchUser, updateUserIsLogin } from '../../../redux/slices/userSlice';
@@ -20,6 +21,7 @@ const Header = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const location = useLocation()
+    const { userToken } = useSelector(state => state.users)
 
     return (
         <header header className={`adminHeader  ${theme ? "" : "lightMode"} `} style={{ display: location.pathname == '/admin/loginAdmin' || location.pathname == '/admin/adminRegister' ? 'none' : '' }} ref={adminHeadRef} >
@@ -37,18 +39,17 @@ const Header = () => {
                     <li>
                         <div className="headerSearchInputBox  mt-2 mt-md-0 d-none d-lg-flex ">
                             <input
-                                disabled={location.pathname !==  '/admin/products' &&
+                                disabled={location.pathname !== 'admin/products' &&
                                     location.pathname !== '/admin/faq' &&
                                     location.pathname !== '/admin/users' &&
                                     location.pathname !== '/admin/subscribers' &&
                                     location.pathname !== '/admin/orders' &&
                                     location.pathname !== '/admin/blogs' 
-                                    // location.pathname !== '/admin/products'
 
                                 }
                                 type="text" placeholder='Search '
                                 onChange={(e) => {
-                                    if (location.pathname =='/admin/blogs') {
+                                    if (location.pathname == '/admin/blogs') {
                                         dispatch(searchBlog(e.target.value))
                                     } else if (location.pathname == '/admin/faq') {
                                         dispatch(searchQuestions(e.target.value))
@@ -67,10 +68,7 @@ const Header = () => {
 
                                     } 
                                     
-                                    // else if (location.pathname == '/admin/blogs') {
-                                    //     dispatch(searchBlog(e.target.value))
-
-                                    // }
+                                 
                                 }}
                             />
                         </div>
@@ -81,9 +79,10 @@ const Header = () => {
                         <button className='userLeftDropBtn' onClick={handleActiveDrop}>
                             <div className="userLeftDropButtonInside">
                                 <img
-                                    src="'https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg" alt="exImage" />
+                                    src={`${userToken?.isAdmin == true ? userToken?.profileImage : 'https://cdn.vectorstock.com/i/preview-1x/08/19/gray-photo-placeholder-icon-design-ui-vector-35850819.jpg'
+                                        }`} alt="exImage" />
                                 <p className='mb-0 d-none d-sm-block '>
-                                  admin
+                                    {userToken?.isAdmin == true ? userToken?.fullName : 'Admin'}
                                 </p>
                                 <span className='d-none d-sm-block'>
                                     <Icon path={mdiMenuDown} size={0.7} />
@@ -95,7 +94,13 @@ const Header = () => {
                             <h6 className="p-3 mb-0">Profile</h6>
                             <div className="userLeftDropInsideLine"></div>
 
-                            <button  className='userLeftDropInsideClick'>
+                            <button onClick={async () => {
+                                dispatch(updateUserIsLogin({ id: userToken?.id, newData: { isLogin: false } }))
+                                dispatch(logOut())
+                                toast.success('Logout successful! See you next time.');
+
+                                navigate('/')
+                            }} className='userLeftDropInsideClick'>
                                 <div className="userLeftDropInsideIcon">
                                     <div className="userLeftDropInsideI setLogOutI">
                                         <Icon path={mdiLogout} size={0.8} />

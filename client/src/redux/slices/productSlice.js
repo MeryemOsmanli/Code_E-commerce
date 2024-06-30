@@ -24,6 +24,7 @@ export const updateProduct = createAsyncThunk('updateProduct', async ({ id, newD
     return response.data
 })
 
+
 const productSlice = createSlice({
     name: "products",
     initialState: {

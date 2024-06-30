@@ -1,20 +1,28 @@
-import React from 'react';
+import React from "react";
 import {
-    Badge,
-    Button,
-    Container,
-    Form,
-    Nav,
-    NavDropdown,
-    Navbar,
-  } from "react-bootstrap";
+  Badge,
+  Button,
+  Container,
+  Form,
+  Nav,
+  NavDropdown,
+  Navbar,
+} from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut, updateUserIsLogin } from "../../../redux/slices/userSlice";
+import i18n from "../../../i18n";
+import { useTranslation } from "react-i18next";
 
-function UserNavbar() {
+const Header = () => {
+  const dispatch = useDispatch();
+  const { userToken } = useSelector((state) => state.users);
+  const { t, i18n } = useTranslation();
+
   return (
     <>
-          <Navbar sticky="top" expand="lg" className="bg-body ">
+      <Navbar sticky="top" expand="lg" className="bg-body ">
         <Container fluid>
-          <Navbar.Brand href="#">MaRainbow</Navbar.Brand>
+          <Navbar.Brand href="#">Emil's shitils</Navbar.Brand>
 
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -23,46 +31,72 @@ function UserNavbar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              {/* <Nav.Link href="/">{t("home")}</Nav.Link> */}
-              <Nav.Link href="/">Home</Nav.Link>
-              {/* <Nav.Link href="/contact">{t("contact")}</Nav.Link> */}
-              <Nav.Link href="/contact">contact</Nav.Link>
-              {/* <Nav.Link href="/blogs">{t("blogs")}</Nav.Link> */}
-              <Nav.Link href="/blogs">blogs</Nav.Link>
-              {/* <Nav.Link href="/shop">{t("shop")}</Nav.Link> */}
-              <Nav.Link href="/shop">shop</Nav.Link>
-              <Nav.Link href="/faq">faq</Nav.Link>
+              <Nav.Link href="/">{t("home")}</Nav.Link>
+              <Nav.Link href="/contact">{t("contact")}</Nav.Link>
+              <Nav.Link href="/blogs">{t("blogs")}</Nav.Link>
+              <Nav.Link href="/shop">{t("shop")}</Nav.Link>
+              <Nav.Link href="/faq">{t("faq")}</Nav.Link>
 
-      
-              
+              {userToken?.isLogin == true ? (
+                ""
+              ) : (
                 <NavDropdown
-                //   title={t("registration")}
-                  title="registration"
+                  title={t("registration")}
                   id="navbarScrollingDropdown"
                 >
-                  {/* <NavDropdown.Item href="/login">
+                  <NavDropdown.Item href="/login">
                     {t("login")}
-                  </NavDropdown.Item> */}
-                   <NavDropdown.Item href="/login">
-                   login
                   </NavDropdown.Item>
-                  {/* <NavDropdown.Item href="/register">
+                  <NavDropdown.Item href="/register">
                     {t("register")}
-                  </NavDropdown.Item> */}
-                   <NavDropdown.Item href="/register">
-                   register
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                 </NavDropdown>
-          
-
+              )}
+           
+             
+              {userToken?.isLogin == true ? (
+                <NavDropdown title={t("account")} id="navbarScrollingDropdown">
+                  <NavDropdown.ItemText>
+                    <p>{userToken?.fullName}</p>
+                  </NavDropdown.ItemText>
+                  <NavDropdown.ItemText>
+                    <button
+                      onClick={() => {
+                        dispatch(
+                          updateUserIsLogin({
+                            id: userToken?.id,
+                            newData: { isLogin: false },
+                          })
+                        );
+                        dispatch(logOut());
+                      }}
+                      className="btn btn-danger"
+                    >
+                      {t("logout")}
+                    </button>
+                  </NavDropdown.ItemText>
+                  <NavDropdown.Divider />
+                </NavDropdown>
+              ) : (
+                ""
+              )}
 
               <Nav.Link href="/basket">
                 <i
                   className="fa-solid fa-bag-shopping"
                   style={{ fontSize: "20px" }}
                 >
-   
+                  {userToken?.isLogin == true ? (
+                    <Badge
+                      className="bg-transparent text-light"
+                      style={{ fontSize: "11px" }}
+                    >
+                      {userToken?.basket?.length}
+                    </Badge>
+                  ) : (
+                    ""
+                  )}
                 </i>
               </Nav.Link>
               <Nav.Link href="/wishlist">
@@ -75,9 +109,9 @@ function UserNavbar() {
                 <div>
                   <button
                     className="langbtn"
-                    // onClick={() => {
-                    //   i18n.changeLanguage("az");
-                    // }}
+                    onClick={() => {
+                      i18n.changeLanguage("az");
+                    }}
                   >
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/1200px-Flag_of_Azerbaijan.svg.png"
@@ -86,9 +120,9 @@ function UserNavbar() {
                   </button>
                   <button
                     className="langbtn"
-                    // onClick={() => {
-                    //   i18n.changeLanguage("en");
-                    // }}
+                    onClick={() => {
+                      i18n.changeLanguage("en");
+                    }}
                   >
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/640px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
@@ -102,7 +136,7 @@ function UserNavbar() {
         </Container>
       </Navbar>
     </>
-  )
-}
+  );
+};
 
-export default UserNavbar
+export default Header;

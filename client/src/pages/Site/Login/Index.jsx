@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router";
@@ -8,10 +6,10 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, updateUserIsLogin } from "../../../redux/slices/userSlice";
 import bcrypt from "bcryptjs";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 function Login() {
-  // const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.users);
@@ -79,7 +77,7 @@ function Login() {
   return (
     <>
       <Helmet>
-        <title>login</title>
+        <title> {t("login")}</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="login_background">
@@ -91,8 +89,8 @@ function Login() {
             />
             <div className="overlay_login">
               <div className="overlay_text_box">
-                <h1>account</h1>
-                <span>Home / Account</span>
+                <h1>{t("account")} </h1>
+                <span>{t("homeaccount")}</span>
               </div>
             </div>
           </div>
@@ -101,8 +99,8 @@ function Login() {
           <div className="contact_form">
             <div className="contact_form_text">
               <i className="fa-regular fa-envelope"></i>
-              <h1>Get in touch</h1>
-              <p>We'd love to hear from you</p>
+              <h1>{t("getintouch")}</h1>
+              <p>{t("hearcontact")}</p>
             </div>
             <div className="form_content">
               <form className="input_box" onSubmit={formik.handleSubmit}>
@@ -138,13 +136,13 @@ function Login() {
                 </div>
 
                 <div>
-                  <button type="submit">submit</button>
+                  <button type="submit">{t("submit")}</button>
                   <button
                     onClick={() => {
                       navigate("/register");
                     }}
                   >
-                   creataccount
+                    {t("creataccount")}
                   </button>
                 </div>
               </form>

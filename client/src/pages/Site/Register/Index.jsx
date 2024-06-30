@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useFormik } from "formik";
@@ -7,9 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../../redux/slices/userSlice";
 import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 function Register() {
-  // const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const { users } = useSelector((state) => state.users);
   const navigate = useNavigate();
@@ -66,7 +65,7 @@ function Register() {
   return (
     <>
       <Helmet>
-        <title> register</title>
+        <title> {t("register")}</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div className="login_background">
@@ -78,8 +77,8 @@ function Register() {
             />
             <div className="overlay_login">
               <div className="overlay_text_box">
-                <h1>Create Account </h1>
-                <span>Home / Create Account</span>
+                <h1>{t("creataccount")} </h1>
+                <span>{t("homecreateaccount")}</span>
               </div>
             </div>
           </div>
@@ -88,8 +87,8 @@ function Register() {
           <div className="contact_form">
             <div className="contact_form_text">
               <i className="fa-regular fa-envelope"></i>
-              <h1>Get in touch</h1>
-              <p>We'd love to hear from you </p>
+              <h1>{t("getintouch")}</h1>
+              <p>{t("hearcontact")} </p>
             </div>
             <div className="form_content">
               <form className="input_box" onSubmit={formik.handleSubmit}>
@@ -185,10 +184,10 @@ function Register() {
                   ) : null}
                 </div>
                 <div>
-                  <button type="submit">create </button>
+                  <button type="submit">{t("create")} </button>
                   <button>
                     <a href="https://demo.htmlcodex.com/1362/ice-cream-shop-website-template/img/header.jpg">
-                    Return to Store
+                      {t("returnstore")}
                     </a>
                   </button>
                 </div>
@@ -210,4 +209,3 @@ function Register() {
 }
 
 export default Register;
-

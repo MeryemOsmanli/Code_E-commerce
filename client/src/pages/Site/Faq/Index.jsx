@@ -44,15 +44,7 @@ const secondType = questions.filter((x) => x.type == "Payment Information");
                 {/* <div className="faq_box">
                   <h6>WHAT SHIPPING METHODS ARE AVAILABLE?</h6>
                   <p>Kilres ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                </div>
-                <div className="faq_box">
-                  <h6>WHAT SHIPPING METHODS ARE AVAILABLE?</h6>
-                  <p>Kilres ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                </div>
-                <div className="faq_box">
-                  <h6>WHAT SHIPPING METHODS ARE AVAILABLE?</h6>
-                  <p>Kilres ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                </div>
+                </div>    
                 <div className="faq_box">
                   <h6>WHAT SHIPPING METHODS ARE AVAILABLE?</h6>
                   <p>Kilres ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>

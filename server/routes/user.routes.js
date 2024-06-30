@@ -1,6 +1,6 @@
 const express = require('express');
 const UserController = require('../controller/user.controller');
-// const protect = require('../middleware/auth.middleware');
+const protect = require('../middleware/auth.middleware');
 const router = express.Router()
 
 // Get 
@@ -9,7 +9,7 @@ router.get('/', UserController.getAll)
 router.post('/register', UserController.register)
 router.post('/login', UserController.login)
 // Get
-router.get('/getMe', UserController.getMe)
+router.get('/getMe', protect, UserController.getMe)
 // Put
 router.put('/updateIsLogin/:id', UserController.updateUserIsLogin);
 // Delete
@@ -17,14 +17,14 @@ router.delete('/:id', UserController.deleteUser)
 // Get
 router.get('/:id', UserController.getOne)
 // Wishlist Routes
-router.put('/addToWishlist/:productId', UserController.addToWishlist);
-router.put('/removeFromWishlist/:productId', UserController.removeFromWishlist);
+router.put('/addToWishlist/:productId', protect, UserController.addToWishlist);
+router.put('/removeFromWishlist/:productId', protect, UserController.removeFromWishlist);
 
 // Basket Routes
-router.put('/addToBasket/:productId', UserController.addToBasket);
-router.put('/decreaseBasketItem/:productId', UserController.decreasedBasket);
-router.put('/deleteFromBasket/:productId', UserController.removeItemFromBasket);
-router.put('/clearBasket/:id', UserController.clearBasket);
+router.put('/addToBasket/:productId', protect, UserController.addToBasket);
+router.put('/decreaseBasketItem/:productId', protect, UserController.decreasedBasket);
+router.put('/deleteFromBasket/:productId', protect, UserController.removeItemFromBasket);
+router.put('/clearBasket/:id', protect, UserController.clearBasket);
 
 
 

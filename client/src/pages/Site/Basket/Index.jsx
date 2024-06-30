@@ -1,10 +1,30 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addToBasket,
+  decreaseBasketItem,
+  deleteFromBasket,
+} from "../../../redux/slices/userSlice";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 
 function Basket() {
-  return <>
-     <div className="header_image_basket">
-        <div className="overlay_shop">basket </div>
+  const { userToken } = useSelector((state) => state.users);
+  const { t, i18n } = useTranslation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  let basketTotalPrice = 0;
+  return (
+    <>
+      <Helmet>
+        <title>{t("basket")}</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
+      <div className="header_image_basket">
+        <div className="overlay_shop">{t("basket")} </div>
       </div>
       <div className="basket_section">
         <div className="basket_container">
@@ -17,64 +37,102 @@ function Basket() {
             </div>
           </div>
           <div className="basket_data_container">
+            {userToken?.basket?.map((item, index) => {
+              basketTotalPrice += item.totalPrice;
 
-                <div  className="basket_box">
+              return (
+                <div key={index} className="basket_box">
                   <div className="basket_data_image">
-                    <img src="https://dt-faryita.myshopify.com/cdn/shop/files/imgicon01_db5e7103-ab82-4bdb-a1b5-dc77c036d589_200x200.png?v=165511063" alt="" />
+                    <img src={item?.product?.images} alt="" />
                   </div>
                   <div className="basket_box_text">
-                    <h5>Orange Juice</h5>
-
-                    <p>price :$11</p>
-
-                    <h4>total:0$</h4>
+                    <h5>{item?.product?.title}</h5>
+                    <p>
+                      {t("price")} :${item?.product?.price}
+                    </p>
+                    <h4>
+                      {t("total")}: ${item?.totalPrice}
+                    </h4>
                   </div>
                   <div className="basket_box_btns">
                     <div className="basket_box_left_btns">
                       <div>
                         <button
                           className="button_basket_dec"
-
+                          disabled={item.count == 1}
+                          onClick={() => {
+                            dispatch(
+                              decreaseBasketItem({
+                                id: item.product._id,
+                                newData: item,
+                              })
+                            );
+                            toast.success("Item decreased");
+                          }}
                         >
                           -
                         </button>
                         <button className="button_basket_count">
-                          9
+                          {item?.count}
                         </button>
                         <button
                           className="button_basket_inc"
+                          onClick={() => {
+                            dispatch(
+                              addToBasket({
+                                id: item.product._id,
+                                newData: item,
+                              })
+                            );
+                            toast.success("Item increased");
+                          }}
                         >
                           +
                         </button>
                       </div>
                     </div>
                     <div className="basket_box_right_icon">
+                      {/* <div>
+                      <i
+                        className="fa-regular fa-heart"
+                        style={{ color: "#ff0000" }}
+                      ></i>
+                    </div> */}
                       <div>
                         <i
                           className="fa-solid fa-xmark"
-                          style={{ color: "white" }}
+                          style={{ color: "white" ,cursor:"pointer"}}
+                          onClick={() => {
+                            dispatch(
+                              deleteFromBasket({
+                                id: item.product._id,
+                                newData: item,
+                              })
+                            );
+                            toast.success("Item deleted successfully");
+                          }}
                         ></i>
                       </div>
                     </div>
                   </div>
                 </div>
-
+              );
+            })}
           </div>
           <div className="basket_right_box"></div>
         </div>
         <div
           className="basket_footer_section"
-   
+          style={{ display: userToken?.basket?.length > 0 ? " " : "none" }}
         >
           <div className="total">
-      
-            total:$738
+            {t("total")}: ${basketTotalPrice}
           </div>
-        
-          <button>checkout</button>
+          <button onClick={() => navigate("/checkout")}>{t("pay")} </button>
         </div>
       </div>
-  </>;
+    </>
+  );
 }
 
 export default Basket;

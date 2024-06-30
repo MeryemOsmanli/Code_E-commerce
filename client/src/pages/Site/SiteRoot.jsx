@@ -5,30 +5,38 @@ import Footer from "../../layout/Site/Footer/Index";
 import { useDispatch } from "react-redux";
 import { getAllQuestions } from "../../redux/slices/faqSlice";
 // import { getAllOrders } from "../../redux/slices/orderSlice";
+// import { getAllOurTeam } from "../../redux/slices/ourTeamSlice";
 // import { getAllSubscribers } from "../../redux/slices/subscribersSlice";
-import { getAllUsers } from "../../redux/slices/userSlice";
+import { getAllUsers, getUserToken } from "../../redux/slices/userSlice";
 import { getAllProducts } from "../../redux/slices/productSlice";
 import { getAllBlog } from "../../redux/slices/blogSlice";
 
 const SiteRoot = () => {
-    const dispatch = useDispatch()
-    useEffect(() => {
-      dispatch(getAllQuestions())
-    //   dispatch(getAllOrders())
-    //   dispatch(getAllSubscribers())
-      dispatch(getAllUsers())
-      dispatch(getAllProducts())
-      dispatch(getAllBlog())
-  
-    }, [])
- 
-    return (
-      <>
-        <Header />
-        <Outlet />
-        <Footer />
-      </>
-    );
-  };
-  
-  export default SiteRoot;
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getAllQuestions())
+    // dispatch(getAllOrders())
+    // dispatch(getAllOurTeam())
+    // dispatch(getAllSubscribers())
+    dispatch(getAllUsers())
+    dispatch(getAllProducts())
+    dispatch(getAllBlog())
+
+  }, [])
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      dispatch(getUserToken())
+
+    }
+  }, [])
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
+
+export default SiteRoot;
