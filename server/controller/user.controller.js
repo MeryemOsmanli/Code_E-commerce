@@ -41,18 +41,7 @@ const UserController = {
           password: user.password,
           wishlist: user.wishlist,
           basket: user.basket,
-        //   token: await generateToken({
-        //     id: user._id,
-        //     fullName: user.fullName,
-        //     username: user.username,
-        //     gmail: user.gmail,
-        //     profileImage: user.profileImage,
-        //     isAdmin: user.isAdmin,
-        //     isLogin: user.isLogin,
-        //     password: user.password,
-        //     wishlist: user.wishlist,
-        //     basket: user.basket,
-        //   }),
+  
         });
       } else {
         return res.status(401).send("Email Or Password Incorrect");
@@ -103,18 +92,7 @@ const UserController = {
         password: newUser.password,
         wishlist: newUser.wishlist,
         basket: newUser.basket,
-        // token: await generateToken({
-        //   id: newUser._id,
-        //   fullName: newUser.fullName,
-        //   username: newUser.username,
-        //   gmail: newUser.gmail,
-        //   profileImage: newUser.profileImage,
-        //   isAdmin: newUser.isAdmin,
-        //   isLogin: newUser.isLogin,
-        //   password: newUser.password,
-        //   wishlist: newUser.wishlist,
-        //   basket: newUser.basket,
-        // }),
+
       });
     } catch (err) {
       res.status(404).send("Error In Register" + err);
@@ -145,18 +123,6 @@ const UserController = {
       );
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
 
       res.status(200).send({
         _id: updateUser._id,
@@ -169,7 +135,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -201,18 +166,7 @@ const UserController = {
           .json({ error: "Product already in wishlist", status: 400 });
       }
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+
 
       res.status(200).send({
         _id: updateUser._id,
@@ -225,7 +179,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -255,18 +208,7 @@ const UserController = {
 
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+ 
 
       res.status(200).send({
         _id: updateUser._id,
@@ -279,7 +221,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       res.status(500).json({ error: "Error in removing from wishlist" });
@@ -331,18 +272,7 @@ const UserController = {
 
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+
 
       res.status(200).send({
         _id: updateUser._id,
@@ -355,7 +285,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -398,18 +327,7 @@ const UserController = {
 
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+
 
       res.status(200).send({
         _id: updateUser._id,
@@ -422,7 +340,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -455,18 +372,7 @@ const UserController = {
 
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+ 
 
       res.status(200).send({
         _id: updateUser._id,
@@ -479,7 +385,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -499,18 +404,7 @@ const UserController = {
 
       const updateUser = await UserModel.findById(id).populate("wishlist");
 
-    //   const updatedToken = await generateToken({
-    //     id: updateUser._id,
-    //     fullName: updateUser.fullName,
-    //     username: updateUser.username,
-    //     gmail: updateUser.gmail,
-    //     profileImage: updateUser.profileImage,
-    //     isAdmin: updateUser.isAdmin,
-    //     isLogin: updateUser.isLogin,
-    //     password: updateUser.password,
-    //     wishlist: updateUser.wishlist,
-    //     basket: updateUser.basket,
-    //   });
+   
 
       res.status(200).send({
         _id: updateUser._id,
@@ -523,7 +417,6 @@ const UserController = {
         password: updateUser.password,
         wishlist: updateUser.wishlist,
         basket: updateUser.basket,
-        // token: updatedToken,
       });
     } catch (err) {
       console.log(err);
@@ -531,36 +424,6 @@ const UserController = {
     }
   },
 };
-// const generateToken = async ({
-//   id,
-//   fullName,
-//   username,
-//   gmail,
-//   profileImage,
-//   isAdmin,
-//   isLogin,
-//   password,
-//   wishlist,
-//   basket,
-// }) => {
-//   return jwt.sign(
-//     {
-//       id,
-//       fullName,
-//       username,
-//       gmail,
-//       profileImage,
-//       isAdmin,
-//       isLogin,
-//       password,
-//       wishlist,
-//       basket,
-//     },
-//     "meryem",
-//     {
-//       expiresIn: "11h",
-//     }
-//   );
-// };
+
 module.exports = UserController;
 
